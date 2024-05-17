@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Registration</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Your custom stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            padding-top: 56px; /* Adjust based on your header height */
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #343a40; /* Bootstrap dark theme color */
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background-color: #e9ecef; /* Bootstrap light theme color */
+            padding: 0.5rem;
+            border-bottom: 1px solid #cfd8dc;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .action-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        .action-box a {
+            display: block;
+            margin-top: 10px;
+            padding: 12px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            background-color: #4CAF50; /* Green button color */
+            color: white;
+            border-radius: 5px;
+        }
+
+        .action-box a:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        .action-box.home {
+            background: linear-gradient(to right, #7a4174, #4c2c5b); /* Gradient background for Explore Hackathons */
+            border-color: #2980b9;
+            color: #ffffff;
+        }
+
+        .action-box.register {
+            background-color: #2ecc71;
+            border-color: #27ae60;
+            color: #ffffff;
+        }
+
+        .action-box.login {
+            background-color: #e74c3c;
+            border-color: #c0392b;
+            color: #ffffff;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Hackathon Registration</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="action-box home">
+            <h2>Explore Hackathons</h2>
+            <p>Discover exciting hackathons and showcase your skills.</p>
+            <a href="{{ url_for('home') }}">Go to Home</a>
+        </div>
+
+        <div class="action-box register">
+            <h2>Register for Hackathon</h2>
+            <p>Join us and be a part of innovative challenges.</p>
+            <a href="{{ url_for('register') }}">Register Now</a>
+        </div>
+
+        <div class="action-box login">
+            <h2>Login to Your Account</h2>
+            <p>Already registered? Login and participate.</p>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Hackathon Registration</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
